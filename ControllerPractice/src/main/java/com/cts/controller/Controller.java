@@ -15,4 +15,6 @@ public class Controller {
     public String getdatabypathparm(@RequestParam String name){
         return "my name is "+name;
     }
+
+    
 }
