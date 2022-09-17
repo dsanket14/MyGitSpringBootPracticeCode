@@ -22,6 +22,13 @@ public class StudentService {
         return studentDaoImpl.saveBulOfData(students);
     }
 
+    public Student signIn(Student student){
+        return studentDaoImpl.signIn(student);
+    }
+
+    public boolean signUp(String studentEmailId, String studentPassword){
+       return studentDaoImpl.signUp(studentEmailId,studentPassword);
+    }
     public List<Student> getAll(){
         return studentDaoImpl.getAll();
     }

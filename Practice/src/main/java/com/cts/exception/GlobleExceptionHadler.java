@@ -31,4 +31,9 @@ public class GlobleExceptionHadler {
         return new ResponseEntity<String>("Record not found for corresponding Id",HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<String> nullpointer(NullPointerException nullPointerException){
+        return  new ResponseEntity<String>("You are Passling Null valur",HttpStatus.BAD_REQUEST);
+    }
+
 }

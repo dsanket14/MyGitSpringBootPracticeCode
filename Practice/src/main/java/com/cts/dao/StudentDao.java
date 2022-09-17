@@ -22,6 +22,21 @@ public class StudentDao {
     public List<Student> saveBulOfData(List<Student> students){
         return studentRepoImpl.saveAll(students);
     }
+
+    public Student signIn(Student student){
+        return studentRepoImpl.save(student);
+    }
+
+    public boolean signUp(String studentEmailId, String studentPassword){
+        boolean flag=false;
+        for(Student student: studentRepoImpl.findAll()){
+            if(studentEmailId.equals(student.getStudentEmailId()) && studentPassword.equals(student.getStudentPassword())){
+                flag=true;
+            }
+        }
+        return flag;
+
+    }
     public List<Student> getAll(){
         return studentRepoImpl.findAll();
     }

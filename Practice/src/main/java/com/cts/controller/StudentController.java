@@ -33,6 +33,19 @@ public class StudentController {
        return new ResponseEntity<>(studentList,HttpStatus.CREATED);
     }
 
+    @PostMapping("/signin")
+    public ResponseEntity<Student> signIn(@RequestBody Student student){
+        Student student1=studentServiceImpl.signIn(student);
+        return new ResponseEntity<>(student1,HttpStatus.CREATED);
+    }
+    @GetMapping("/signup/{studentEmailId}/{studentPassword}")
+    public String signUp(@PathVariable String studentEmailId, @PathVariable String studentPassword){
+        boolean signUpStatus=studentServiceImpl.signUp(studentEmailId,studentPassword);
+         if(signUpStatus==true){
+             return "Sign Up Successfully";
+         }
+         return "Your EmailId & Password Not matches with our DataBase";
+    }
     @GetMapping("/getall")
     public ResponseEntity<List<Student>> getAll(){
         List<Student> studentList= studentServiceImpl.getAll();
