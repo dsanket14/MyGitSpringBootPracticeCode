@@ -1,0 +1,5 @@
+to start ZookeeperService---2181 port
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+kafka server--9092 port
+.\bin\windows\kafka-server-start.bat .\config\server.properties
