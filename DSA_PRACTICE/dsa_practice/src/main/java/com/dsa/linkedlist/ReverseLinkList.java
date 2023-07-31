@@ -1,9 +1,4 @@
-package com.dsa.siglylinklist;
-
-import org.w3c.dom.Node;
-
-import java.util.LinkedList;
-import java.util.List;
+package com.dsa.linkedlist;
 
 public class ReverseLinkList {
 
