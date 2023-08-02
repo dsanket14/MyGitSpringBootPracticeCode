@@ -1,6 +1,6 @@
 package com.dsa.linkedlist;
 
-public class ReverseLinkList {
+public class PGM1 {
 
     static Node head;
     static class Node {
@@ -35,7 +35,7 @@ public class ReverseLinkList {
             }
         }
         public static void main(String[] args) {
-            ReverseLinkList list = new ReverseLinkList();
+            PGM1 list = new PGM1();
             list.head = new Node(85);
             list.head.next = new Node(15);
             list.head.next.next = new Node(4);
