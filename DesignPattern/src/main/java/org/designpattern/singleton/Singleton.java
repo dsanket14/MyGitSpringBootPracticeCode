@@ -1,5 +1,10 @@
 package org.designpattern.singleton;
-
+/*
+Use the Singleton pattern when a class in your program should have just a single instance available
+to all clients; for example, a single database object shared by different parts of the program.
+The Singleton pattern disables all other means of creating objects of a class except for the special
+creation method
+*/
 public class Singleton {
 
     /* private static Singleton singleton= new Singleton;
