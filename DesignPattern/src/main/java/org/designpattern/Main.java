@@ -1,5 +1,7 @@
 package org.designpattern;
 
+import org.designpattern.factory.Employee;
+import org.designpattern.factory.EmployeeFactory;
 import org.designpattern.singleton.Singleton;
 import org.designpattern.singleton.SingletonBreak;
 
@@ -16,5 +18,10 @@ public class Main {
         SingletonBreak singletonBreak2= SingletonBreak.getObject();
         System.out.println(singletonBreak1.hashCode());
         System.out.println(singletonBreak2.hashCode());
+
+      System.out.println("Factory Pattern");
+      EmployeeFactory factory= new EmployeeFactory();
+      factory.getEmployeeSalary("Web");
+
     }
 }
